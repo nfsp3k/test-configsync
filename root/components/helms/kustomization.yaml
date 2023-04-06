@@ -1,0 +1,6 @@
+helmCharts:
+- name: kyverno
+  repo: https://kyverno.github.io/kyverno/
+  version: 2.7.1
+  releaseName: kyverno
+  namespace: kyverno

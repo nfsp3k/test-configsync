@@ -1,0 +1,14 @@
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: git@github.ecodesamsung.com:GCPM/space_configsync.git
+    branch: main
+    dir: components/helms
+    auth: token
+    secretRef:
+      name: test

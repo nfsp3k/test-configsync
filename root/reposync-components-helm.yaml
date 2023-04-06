@@ -2,7 +2,7 @@ apiVersion: configsync.gke.io/v1alpha1
 kind: RepoSync
 metadata:
   name: my-repo-sync
-  namespace: config-management-system
+  namespace: bk-test
 spec:
   sourceFormat: unstructured
   git:

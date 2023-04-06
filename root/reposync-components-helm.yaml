@@ -1,14 +1,14 @@
 apiVersion: configsync.gke.io/v1alpha1
 kind: RepoSync
 metadata:
-  name: repo-sync
+  name: my-repo-sync
   namespace: config-management-system
 spec:
   sourceFormat: unstructured
   git:
-    repo: git@github.ecodesamsung.com:GCPM/space_configsync.git
+    repo: https://github.com/nfsp3k/test-configsync.git
     branch: main
     dir: components/helms
-    auth: token
-    secretRef:
-      name: test
+    auth: none
+    noSSLVerify: true
+    proxy: http://10.112.1.184:8080/

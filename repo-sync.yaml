@@ -1,0 +1,11 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/nfsp3k/test-configsync2.git
+    branch: main
+    auth: none
